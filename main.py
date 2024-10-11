@@ -185,8 +185,8 @@ def test():
     
     return render_template("test.html", name=current_user.name)
 
-@app.route("/admin")
-def admin():
+@app.route("/admin_panel")
+def admin_panel():
     return render_template("admin.html", name=current_user.name)
 
 @app.route("/users")

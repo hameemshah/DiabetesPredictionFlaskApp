@@ -26,7 +26,7 @@
           <!-- Admin Panel for admins -->
           {% if current_user.is_authenticated and current_user.id == 1 %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ url_for('admin') }}">Admin Panel</a>
+            <a class="nav-link" href="{{ url_for('admin_panel') }}">Admin Panel</a>
           </li>
           {% endif %}
           <!-- TODO: Hide the Login/Registration navigation for logged-in users -->
