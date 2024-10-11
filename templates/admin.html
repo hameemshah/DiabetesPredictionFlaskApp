@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Welcome Admin {{ name }}</h1>
+    <ul>
+        <li><a href="{{ url_for('users')}}">Users</a></li>
+        <li><a href="{{ url_for('home')}}">Medical Data</a></li>
+        <li><a href="{{ url_for('home')}}">Predictions</a></li>
+        <li><a href="{{ url_for('home')}}">Deploy new model</a></li>
+    </ul>
+{% endblock %}

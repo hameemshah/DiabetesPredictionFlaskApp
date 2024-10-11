@@ -9,7 +9,7 @@
     {% endif %}
     {% endwith %}
   {% block body %}{% endblock %}
-  <h1>Flask Authentication</h1>
+  <h1>Diabetes Prediction</h1>
   <!-- TODO: Hide the Login/Registration buttons for logged-in users -->
     {% if not current_user.is_authenticated: %}
   <a href="{{ url_for('login') }}" class="btn btn-primary btn-block btn-large"
@@ -19,7 +19,10 @@
     href="{{ url_for('register') }}"
     class="btn btn-secondary btn-block btn-large"
     >Register</a
-  >
+  > {%else %}
+  <script>
+      window.location.href = "{{ url_for('secrets') }}";
+  </script>
     {% endif %}
 </div>
 

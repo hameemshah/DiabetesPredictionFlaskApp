@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card-header text-center bg-primary text-white">
+    <h3>Diabetes Prediction Result</h3>
+</div>
+<p class="text-center fs-5">
+    <strong>{{ prediction_message }}</strong><br>
+    Probability of having diabetes: <strong>{{ probability }}%</strong>
+</p>
+<div class="table-responsive">
+    <table class="table table-hover table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody  class="text-light">
+            <tr>
+                <td><strong>Pregnancies</strong></td>
+                <td>{{ data.Pregnancies }}</td>
+            </tr>
+            <tr>
+                <td><strong>Glucose</strong></td>
+                <td>{{ data.Glucose }}</td>
+            </tr>
+            <tr>
+                <td><strong>Blood Pressure</strong></td>
+                <td>{{ data.BloodPressure }}</td>
+            </tr>
+            <tr>
+                <td><strong>Skin Thickness</strong></td>
+                <td>{{ data.SkinThickness }}</td>
+            </tr>
+            <tr>
+                <td><strong>Insulin</strong></td>
+                <td>{{ data.Insulin }}</td>
+            </tr>
+            <tr>
+                <td><strong>BMI</strong></td>
+                <td>{{ data.BMI }}</td>
+            </tr>
+            <tr>
+                <td><strong>Diabetes Pedigree Function</strong></td>
+                <td>{{ data.DiabetesPedigreeFunction }}</td>
+            </tr>
+            <tr>
+                <td><strong>Age</strong></td>
+                <td>{{ data.Age }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
