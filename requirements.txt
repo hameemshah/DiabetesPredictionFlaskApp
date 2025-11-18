@@ -6,4 +6,5 @@ SQLAlchemy==2.0.25
 joblib==1.4.2
 pandas==2.2.2
 scikit-learn==1.5.2
+gunicorn==21.2.0
 scipy==1.14.1
